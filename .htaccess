@@ -1,0 +1,25 @@
+#--------------------------------------------------
+# protège le fichier .hatccess
+#--------------------------------------------------
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
+
+#--------------------------------------------------
+# Répertoire : /subwayRecrutement/
+#--------------------------------------------------
+
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+ErrorDocument 404 http://localhost/subwayRecrutement
+
+#--------------------------------------------------
+# Règles de réécriture d'URL : Subway
+#--------------------------------------------------
+
+
