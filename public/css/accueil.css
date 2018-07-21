@@ -1,66 +1,204 @@
-html,body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Verdana';
-    background-color:#fff0c4;
+    background-color: #fff0c4;
+
 }
 
 /* Section 1 : Présentation */
-#presentation{
+
+#presentation {
     margin: 0;
     background-image: url("../images/presentation.jpg");
     background-size: cover;
     margin: auto;
     width: 100%;
-    height: 600px;
+    height: 80vh;
     text-align: center;
 }
-#presentation *{
+
+#presentation * {
     margin: 0;
 }
 
-#banniere{
+#banniere {
     margin: 0;
     position: relative;
     width: 100%;
     height: 125px;
     line-height: 125px;
-    top: 70%; 
-   
+    top: 70%;
 }
-#fondBanniere{
+
+#fondBanniere {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: #a69a7b;
-    opacity:0.55;
+    opacity: 0.55;
 }
-#textBanniere{
+
+#textBanniere {
     position: absolute;
     margin: auto;
     width: 100%;
-    color:#006230;
+    color: #006230;
     font-size: 250%;
-    font-weight: bold;    
+    font-weight: bold;
 }
-@media screen and (max-width: 1280px){
-    #presentation{height: 550px;}
+
+@media screen and (max-width: 1280px) {
+    #presentation {
+        height: 550px;
+    }
 }
-@media screen and (max-width: 780px){
-    #banniere{
+
+@media screen and (max-width: 780px) {
+    
+    #banniere {
         height: 75px;
         line-height: 75px;
         top 50%;
     }
-    #presentation{height: 500px;}
+    #presentation {
+        height: 500px;
+    }
 }
-@media screen and (max-width: 480px){
-    #banniere{
-      
+
+@media screen and (max-width: 480px) {
+    
+    #banniere {
         top 50%;
     }
-    #textBanniere{
+    #textBanniere {
         font-size: 150%;
     }
-    #presentation{height: 285px;}
+    #presentation {
+        height: 285px;
+    }
+}
+
+/* Section 2 : Pour QUI ? et votre mission */
+
+        #jobInformations {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 150%;
+        }
+
+        .articlePourQui {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #0f8c4e;
+            border: 5px solid #f1bf11;
+            color: white;
+            height: 600px;
+            width: 450px;
+        }
+
+        .articlePourQui h2 {
+            color: #f1bf11;
+            font-size: 225%;
+
+        }
+
+
+        .articlePourQui div {
+            font-size: 115%;
+            height: 50%;
+        }
+
+        .articlePourQui strong {
+            color: #f1bf11;
+        }
+
+        .articlePourQui div+p {
+            font-weight: bold;
+            font-size: 122.5%;
+
+        }
+
+        .articleVotreMission {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #f1bf11;
+            border: 5px solid #0f8c4e;
+            color: #0f8c4e;
+            height: 412.5px;
+            width: 900px;
+        }
+
+        .articleVotreMission p {
+            font-weight: bold;
+        }
+
+        .articleVotreMission h2 {
+            font-size: 225%;
+        }
+
+        .articleVotreMission ul {
+            text-align: left;
+            color: white;
+            width: 375px;
+            margin: auto;
+        }
+
+        @media screen and (max-width: 785px) {
+            #jobInformations h2 {
+                font-size: 175%;
+            }
+
+        }
+
+        }
+
+
+        @media screen and (max-width: 375px) {
+            #jobInformations {
+                font-size: 125%;
+            }
+
+            body{color: red;}
+            .articlePourQui {
+                height: 500px;
+            }
+            .articleVotreMission {
+                height: 300px;
+            }
+            #jobInformations h2 {
+                font-size: 165%;
+            }
+
+        }
+
+        @media screen and (max-width: 300px) {
+            #jobInformations {
+
+                font-size: 120%;
+            }
+            .articleVotreMission {
+                height: 355px;
+            }
+
+            .articleVotreMission ul {
+                width: 85%;
+            }
+        }
+
+        @media screen and (max-width: 285px) {
+            .articleVotreMission {
+                height: 385px;
+            }
+        }
+/* Section 3 : Les restaurants */
+#restaurants h1{
+    font-size: 200%;
 }

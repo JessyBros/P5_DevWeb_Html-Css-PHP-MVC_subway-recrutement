@@ -1,0 +1,95 @@
+/* Section 2 : Pour QUI ? et votre mission */
+
+#jobInformations {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .articlePourQui {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #0f8c4e;
+            border: 5px solid #f1bf11;
+            color: white;
+            height: 400px;
+            width: 300px;
+        }
+
+        .articlePourQui h2 {
+            color: #f1bf11;
+            font-size: 200%;
+
+        }
+
+
+        .articlePourQui div {
+            font-size: 110%;
+            height: 50%;
+        }
+
+        .articlePourQui strong {
+            color: #f1bf11;
+        }
+
+        .articlePourQui div+p {
+            font-weight: bold;
+            font-size: 115%;
+            margin-bottom: 60px;
+        }
+
+        .articleVotreMission {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #f1bf11;
+            border: 5px solid #0f8c4e;
+            color: #0f8c4e;
+            height: 275px;
+            width: 600px;
+        }
+
+        .articleVotreMission p {
+            font-weight: bold;
+        }
+
+        .articleVotreMission h2 {
+            font-size: 200%;
+        }
+
+        .articleVotreMission ul {
+            text-align: left;
+            color: white;
+            width: 250px;
+            margin: auto;
+        }
+
+        @media screen and (max-width: 375px) {
+            .articleVotreMission {
+                height: 300px;
+            }
+            #jobInformations h2{
+                font-size: 165%;
+            }
+            
+        }
+
+        @media screen and (max-width: 300px) {
+            .articleVotreMission {
+                height: 355px;
+            }
+
+            .articleVotreMission ul {
+                width: 85%;
+            }
+        }
+
+        @media screen and (max-width: 285px) {
+            .articleVotreMission {
+                height: 385px;
+            }
+        }

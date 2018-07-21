@@ -19,27 +19,68 @@
 <body>
     <?php require('public/textFunctions/header.php'); ?>
     
+    <!-- Section 2 : Présentation Rejoignez-nous liens recrutement -->
     <section id="presentation">
-    
-      <div id="banniere">
-        <div id="fondBanniere"></div>
-        <p id="textBanniere">Rejoignez-nous !</p>        
-    </div>
+
+        <div id="banniere">
+            <div id="fondBanniere"></div>
+            <p id="textBanniere">Rejoignez-nous !</p>
+        </div>
     </section>
 
-    <?php while ($restaurant= $donneesRestaurant->fetch()) { ?>
+    <!-- Section 2 : Infos Recrutement -->
+    <section id="jobInformations">
+
+        <article class="articlePourQui">
+            <h2>Pour Qui ?</h2>
+            <div>
+                <p>Vous êtes <strong>étudiant(e)</strong> ?</p>
+                <p>Vous Cherchez un <strong>mi-temps</strong> ?</p>
+                <p>Ou tout simplement un <strong>CDI</strong> ?</p>
+            </div>
+            <p>Alors n'hésitez pas une seconde et tentez votre chance !</p>
+        </article>
+
+        <article class="articleVotreMission">
+            <h2>Votre mission ?</h2>
+            <p>Devenez Équipiez polyvalent et rejoignez notre équipe !</p>
+            <ul>
+                <li>Vous accueillerez les clients.</li>
+                <li>Assurez les prépartions.</li>
+                <li>Réalisez des sandwich.</li>
+                <li>Entretenir les locaux</li>
+            </ul>
+            <p>Objectif : Toute tâche qui mèneront au bon fonctionnement du restaurant.</p>
+        </article>
+    </section>
     
+    <!-- Section 3 : Les restaurants liens recrutement -->
+    <section id="restaurants">
+        <h1>Vous êtes décidez à nous rejoindre ?</h1>
+        <h3>Choississez un restaurant et postulez en 30 secondes !</h3>
+    </section>
+    
+    <!-- test -->
+    <?php while ($restaurant= $donneesRestaurant->fetch()) { ?>
+
     <div>
         <?= htmlspecialchars($restaurant['id']) ?>
-        <?= htmlspecialchars($restaurant['ville']) ?>
-        <?= htmlspecialchars($restaurant['adresse']) ?>
-        <?= htmlspecialchars($restaurant['telephone']) ?>
+            <?= htmlspecialchars($restaurant['ville']) ?>
+                <?= htmlspecialchars($restaurant['adresse']) ?>
+                    <?= htmlspecialchars($restaurant['telephone']) ?>
     </div>
 
     <?php }  $donneesRestaurant->closeCursor(); ?>
 
     <?php require('public/textFunctions/footer.php'); ?>
-
-</body>
-
-</html>
+   
+</body </html>
+<style>#restaurants h1{
+    font-size: 200%;
+}
+    #restaurants h1 , #restaurants h3{
+        text-align: center;
+        margin:0;
+        color:#0f8c4e;
+    }
+    </style>
