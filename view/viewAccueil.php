@@ -58,29 +58,42 @@
     <section id="restaurants">
         <h1>Vous êtes décidez à nous rejoindre ?</h1>
         <h3>Choississez un restaurant et postulez en 30 secondes !</h3>
+        <div id="conteneurImagesRestaurant">
+         <?php while ($restaurant = $donneesRestaurant->fetch()) { ?>
+        
+            <article class="imagesRestaurant">
+            <div>
+                <span><?= htmlspecialchars($restaurant['ville']) ?></span>
+            </div>
+             <img src=  "<?= htmlspecialchars($restaurant['image']) ?>" />
+            </article>
+        
+         <?php }  $donneesRestaurant->closeCursor(); ?>
+        </div>
     </section>
     
-    <!-- test -->
-    <?php while ($restaurant= $donneesRestaurant->fetch()) { ?>
+    
+    <!-- test 
+    <?php /*while ($restaurant= $donneesRestaurant->fetch()) { ?>
 
     <div>
         <?= htmlspecialchars($restaurant['id']) ?>
             <?= htmlspecialchars($restaurant['ville']) ?>
                 <?= htmlspecialchars($restaurant['adresse']) ?>
                     <?= htmlspecialchars($restaurant['telephone']) ?>
+                    <?= htmlspecialchars($restaurant['image']) ?>
+                  <img src=  "<?= htmlspecialchars($restaurant['image']) ?>" />
     </div>
-
-    <?php }  $donneesRestaurant->closeCursor(); ?>
+ <?php }  $donneesRestaurant->closeCursor(); */?>-->
+   
 
     <?php require('public/textFunctions/footer.php'); ?>
+    
+    <!-- Section 4 : Map + infos restaurants -->
+    <section id="infoRestaurants">
+         <h1>Où nous retrouvez ?</h1>
+    <div>map</div>
+    </section>
    
-</body </html>
-<style>#restaurants h1{
-    font-size: 200%;
-}
-    #restaurants h1 , #restaurants h3{
-        text-align: center;
-        margin:0;
-        color:#0f8c4e;
-    }
-    </style>
+        </body>
+        </html>
