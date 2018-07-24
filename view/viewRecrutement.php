@@ -16,18 +16,27 @@
 
 <body>
     <?php require('public/textFunctions/header.php'); ?>
-
-    <?php while ($restaurant= $donneesRestaurant->fetch()) { ?>
     
-    <div>
-        <?= htmlspecialchars($restaurant['id']) ?>
-        <?= htmlspecialchars($restaurant['ville']) ?>
-        <?= htmlspecialchars($restaurant['adresse']) ?>
-        <?= htmlspecialchars($restaurant['telephone']) ?>
-    </div>
+    <section id="choixRestaurant">
+        <h1>Quel restaurant souhaitez vous postuler ?</h1>
+        <div>
+        <?php while ($listeRestaurant= $choixRestaurant->fetch()) { ?>
+    
+            <p>
+                <?= htmlspecialchars($listeRestaurant['ville']) ?>
+            </p>
 
-    <?php }  $donneesRestaurant->closeCursor(); ?>
-
+        <?php }  $choixRestaurant->closeCursor(); ?>
+        </div>
+        
+    </section>
+    
+    <section id="">
+    <?= htmlspecialchars($restaurantSelectionner['ville']) ?>
+    <?= htmlspecialchars($restaurantSelectionner['adresse']) ?>
+    <?php echo $_GET['restaurant'] . "ciyciy";?>
+    test
+    </section>
     <?php require('public/textFunctions/footer.php'); ?>
 
 </body>

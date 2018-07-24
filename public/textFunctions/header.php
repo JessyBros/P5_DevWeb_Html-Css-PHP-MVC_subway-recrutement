@@ -1,10 +1,16 @@
-<header>
-    <span id="sub">SUB</span>
-    <span id="way">WAY</span>
-</header>
+<a href="accueil">
+    <header>
+        <span id="sub">SUB</span>
+        <span id="way">WAY</span>
+    </header>
+</a>
 
 <style>
 
+    a{
+    text-decoration: none;    
+    }
+    
     header{
         text-align: center;
         font-size:400%;

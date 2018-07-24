@@ -25,4 +25,12 @@ class RestaurantPostManager{
         $req = $connexion->query('SELECT * FROM restaurant ORDER BY id ');
         return $req;
     }
+    
+    public function marqueurs()
+    {
+        $connexion = $this-> connexion();
+        $req = $connexion->query('SELECT * FROM restaurant ORDER BY id ');
+        return $req;
+    }
+    
 }

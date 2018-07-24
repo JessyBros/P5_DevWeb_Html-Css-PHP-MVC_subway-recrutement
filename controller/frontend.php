@@ -11,10 +11,20 @@ function accueil()
     $restaurantManagers = new RestaurantPostManager(); 
     $donneesRestaurant = $restaurantManagers ->donneesRestaurant(); 
     
+    $marqueursManagers = new RestaurantPostManager(); 
+    $donneesMarqueurs = $marqueursManagers ->marqueurs(); 
+    
     require('view/viewAccueil.php');
 }
 
 function recrutement()
 {
+    $choixRestaurantManagers = new RecrutementPostManager(); 
+    $choixRestaurant = $choixRestaurantManagers ->choixRestaurant();
+    
+    $restaurantSelectionnerManagers = new RecrutementPostManager(); 
+    $idRestaurant = isset($_GET['restaurant']) ? $_GET['restaurant'] : NULL;  
+    $restaurantSelectionner = $restaurantSelectionnerManagers ->restaurantSelectionner($idRestaurant) ;
+    
     require('view/viewRecrutement.php');
 }

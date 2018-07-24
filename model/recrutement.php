@@ -3,7 +3,7 @@
 <!-- Dans une classe private, il insère la connexion à la base de donné-->
 <!-- Dans des functions public appel la fonction private connexion et utilisation des requetes SQL (query, prepare, exec...)-->
 <?php
-class UtilisateurPostManager{
+class RecrutementPostManager{
 
     // connexion à la BASE DE DONNE
      private function connexion()
@@ -17,5 +17,21 @@ class UtilisateurPostManager{
             die('Erreur : '.$e->getMessage());
         }
         return $db;
+    }
+    
+     public function choixRestaurant() // affiche les trois dernier episode
+    {   
+        $connexion = $this-> connexion();
+        $req = $connexion->query('SELECT ville FROM restaurant ORDER BY id ');
+        return $req;
+    }
+    
+      public function restaurantSelectionner($idRestaurant) 
+    {   
+        $connexion = $this-> connexion($idRestaurant);
+        $req = $connexion->prepare('SELECT id, ville, adresse FROM restaurant WHERE id = ? ');
+        $req->execute(array($idRestaurant));
+        $post = $req->fetch();
+        return $post;
     }
 }

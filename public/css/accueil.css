@@ -279,3 +279,10 @@ body {
 .imagesRestaurant:nth-child(2) span {
     background-color: #0f8c4e;
 }
+
+/* Section 4 : Initialisation de la map + infos restaurants */
+
+#map {
+    height: 500px;
+    width: 500px;
+}

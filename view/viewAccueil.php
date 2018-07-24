@@ -14,6 +14,7 @@
     <META NAME="Description" CONTENT="Franchise Subway. restauration 'Le Kremlin-Bicêtre' et ' Val de Fontenay' recrute du personnel. Informations : Qui nous recrutement. Un bref détail du job à réaliser au sein de l'entreprise. Une carte pour la localisation des restaurants et des informations complémentaires.">
     <META NAME="Identifier-URL" CONTENT="url du site dans l'hébergeur">
     <META NAME="Keywords" CONTENT="Subway, recrutement, personnel, job, travail, embauche">
+         <meta name="viewport" content="initial-scale=1.0">
 </head>
 
 <body>
@@ -21,11 +22,14 @@
     
     <!-- Section 2 : Présentation Rejoignez-nous liens recrutement -->
     <section id="presentation">
-
-        <div id="banniere">
-            <div id="fondBanniere"></div>
-            <p id="textBanniere">Rejoignez-nous !</p>
+        
+         <div id="banniere">
+            <a href="recrutement">
+                <div id="fondBanniere"></div>
+                <p id="textBanniere">Rejoignez-nous !</p>
+            </a>
         </div>
+        
     </section>
 
     <!-- Section 2 : Infos Recrutement -->
@@ -61,12 +65,14 @@
         <div id="conteneurImagesRestaurant">
          <?php while ($restaurant = $donneesRestaurant->fetch()) { ?>
         
-            <article class="imagesRestaurant">
-            <div>
-                <span><?= htmlspecialchars($restaurant['ville']) ?></span>
-            </div>
-             <img src=  "<?= htmlspecialchars($restaurant['image']) ?>" />
-            </article>
+        <article class="imagesRestaurant">
+            <a href="recrutement">
+                <div>
+                    <span><?= htmlspecialchars($restaurant['ville']) ?></span>
+                </div>
+                 <img src=  "<?= htmlspecialchars($restaurant['image']) ?>" />
+            </a>
+        </article>
         
          <?php }  $donneesRestaurant->closeCursor(); ?>
         </div>
@@ -87,13 +93,28 @@
  <?php }  $donneesRestaurant->closeCursor(); */?>-->
    
 
-    <?php require('public/textFunctions/footer.php'); ?>
+    
     
     <!-- Section 4 : Map + infos restaurants -->
     <section id="infoRestaurants">
          <h1>Où nous retrouvez ?</h1>
-    <div>map</div>
+    <div id="map"></div>
     </section>
+    <?php require('public/textFunctions/footer.php'); ?>
+    
+    <style>
+        #map{
+            height: 500px;
+            width:500px;
+        }
+    </style>
+    
+    <script src="public/js/map/insertionMap.js"></script>
+    <script src="public/js/map/prototypeMarqueur.js"></script>
    
+  
+ 
+    
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD_ZAHyvZx-_3Fy66piMrK-ne4NQEoOv4&callback=initMap" async defer></script>
         </body>
         </html>
