@@ -19,17 +19,17 @@ class RecrutementPostManager{
         return $db;
     }
     
-     public function choixRestaurant() // affiche les trois dernier episode
+     public function choixRestaurant() 
     {   
         $connexion = $this-> connexion();
-        $req = $connexion->query('SELECT ville FROM restaurant ORDER BY id ');
+        $req = $connexion->query('SELECT id, url, ville FROM restaurant ORDER BY id ');
         return $req;
     }
     
       public function restaurantSelectionner($idRestaurant) 
     {   
         $connexion = $this-> connexion($idRestaurant);
-        $req = $connexion->prepare('SELECT id, ville, adresse FROM restaurant WHERE id = ? ');
+        $req = $connexion->prepare('SELECT url, ville, adresse FROM restaurant WHERE url = ? ');
         $req->execute(array($idRestaurant));
         $post = $req->fetch();
         return $post;

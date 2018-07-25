@@ -66,7 +66,7 @@
          <?php while ($restaurant = $donneesRestaurant->fetch()) { ?>
         
         <article class="imagesRestaurant">
-            <a href="recrutement">
+            <a href="recrutement-<?= htmlspecialchars($restaurant['url']) ?>">
                 <div>
                     <span><?= htmlspecialchars($restaurant['ville']) ?></span>
                 </div>
@@ -109,12 +109,7 @@
         }
     </style>
     
-    <script src="public/js/map/insertionMap.js"></script>
-    <script src="public/js/map/prototypeMarqueur.js"></script>
-   
-  
- 
-    
+    <?php require('public/js/map/insertionMap.php'); ?>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD_ZAHyvZx-_3Fy66piMrK-ne4NQEoOv4&callback=initMap" async defer></script>
         </body>
         </html>

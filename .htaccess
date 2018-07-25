@@ -25,4 +25,4 @@ ErrorDocument 404 http://localhost/subwayRecrutement
 
 RewriteRule ^$ index.php?action=accueil
 RewriteRule ^recrutement$ index.php?action=recrutement
-RewriteRule ^recrutement-([0-9]+) $index.php?action=recrutement&restaurant=$1
+RewriteRule ^recrutement-(.*) index.php?action=recrutement&restaurant=$1
