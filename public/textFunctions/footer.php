@@ -8,6 +8,7 @@
     footer{
         text-align: center;
         background-color:  #e9e0c4;
+        margin: 0;
     }
     footer p{
         margin:5px 0 5px 0;

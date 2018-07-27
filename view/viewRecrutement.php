@@ -14,50 +14,73 @@
     <META NAME="Keywords" CONTENT="Subway, recrutement, personnel, job, travail, embauche">
 </head>
 
-<body>
-    <?php require('public/textFunctions/header.php'); ?>
+<body id="dispositionDeLaPage">
 
-    <section id="pageSansGet">
-        <h1>Quel restaurant souhaitez vous postuler ?</h1>
-        <div>
-            <?php while ($listeRestaurant= $choixRestaurant->fetch()) { ?>
-            <a href="recrutement-<?= htmlspecialchars($listeRestaurant['url']) ?>">
+    <?php require('public/functions/pageRecrutementAvecGetOnlyCSS.php'); ?>
+
+    <div class="elementPage">
+
+        <!-- header -->
+        <?php require('public/textFunctions/header.php'); ?>
+
+        <!-- L'utilisateur doit choisir le restautant auquel il souhaite postuler son cv et sa ldm-->
+        <section id="pageSansGet">
+            <h1>Quel restaurant souhaitez vous postuler ?</h1>
+            <div>
+                <?php while ($listeRestaurant= $choixRestaurant->fetch()) { ?>
+                <a href="recrutement-<?= htmlspecialchars($listeRestaurant['url']) ?>">
+                    <p>
+                        <?= htmlspecialchars($listeRestaurant['ville']) ?>
+                    </p>
+                </a>
+                <?php }  $choixRestaurant->closeCursor(); ?>
+            </div>
+        </section>
+
+
+
+        <!-- Affiche le restaurant séléctionné avec son adresse. Il peut également cliqué sur un boutton pour être rediriger à la liste de tous les restaurants-->
+        <section id="pageAvecGet">
+            <nav>
+                <h2>
+                    <?= htmlspecialchars($restaurantSelectionner['ville']) ?>
+                </h2>
                 <p>
-                    <?= htmlspecialchars($listeRestaurant['ville']) ?>
+                    <?= htmlspecialchars($restaurantSelectionner['adresse']) ?>
                 </p>
-            </a>
-            <?php }  $choixRestaurant->closeCursor(); ?>
-        </div>
+                <a href="recrutement">
+                    <button>Choisir un autre restaurant ?</button>
+                </a>
+            </nav>
 
-    </section>
+       
+            <!-- Formulaire pour envoyé son cv et sa lm-->
+            <form action="recrutement-<?= htmlspecialchars($restaurantSelectionner['url']) ?>" method="post">
 
-    <section id="pageAvecGet">
+                <div>
+                    <h2>Votre curriculum vitæ</h2>
+                    <input name="cv" required="" type="file">
+                </div>
+                <div>
+                    <h2>votre lettre de motivation</h2>
+                    <input name="lm" required="" type="file">
+                </div>
+                <h2>Vos disponibilités :</h2>
+                <p>exemple : Dès septembre du lundi au samedi</p>
+                <textarea name="disponibilite"></textarea>
+                <br>
+                <input type="submit" name="postumler" value="Postuler !" />
+            </form>
+        </section>
 
-        <nav>
-            <h2>
-                <?= htmlspecialchars($restaurantSelectionner['ville']) ?>
-            </h2>
-            <?= htmlspecialchars($restaurantSelectionner['adresse']) ?>
-        </nav>
+    </div>
 
-        <form action="recrutement-<?= htmlspecialchars($listeRestaurant['url']) ?>" method="post">
 
-            <h2>Votre curriculum vitæ</h2>
-            <input name="cv" required="" type="file">
+    <!-- Footer-->
+    <div class="elementPage">
+        <?php require('public/textFunctions/footer.php'); ?>
+    </div>
 
-            <h2>votre lettre de motivation</h2>
-            <input name="lm" required="" type="file">
-
-            <h2>Vos disponibilités :</h2>
-            <p>exemple : Dès septembre du lundi au samedi</p>
-            <textarea></textarea>
-            <br>
-            <input type="submit" name="postumler" value="Postuler !" />
-        </form>
-
-    </section>
-
-    <?php require('public/textFunctions/footer.php'); ?>
 
 </body>
 

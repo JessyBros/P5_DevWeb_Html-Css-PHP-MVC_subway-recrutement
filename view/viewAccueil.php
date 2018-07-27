@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <div id="page">
     <?php require('public/textFunctions/header.php'); ?>
     
     <!-- Section 2 : Présentation Rejoignez-nous liens recrutement -->
@@ -78,38 +79,44 @@
         </div>
     </section>
     
+<style>
+     #infoRestaurants{
+            text-align: center;
+            color: #006230;
+        }
+        #map{
+            height: 500px;
+            width:98%;
+            max-width: 1000px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: auto;
+        }
+    #page
+    {max-width: 1500px;
+    margin: auto;
+    background-color: #fff0c4;
     
-    <!-- test 
-    <?php /*while ($restaurant= $donneesRestaurant->fetch()) { ?>
+   }
+    body{background-color: #fff0c4;}
 
-    <div>
-        <?= htmlspecialchars($restaurant['id']) ?>
-            <?= htmlspecialchars($restaurant['ville']) ?>
-                <?= htmlspecialchars($restaurant['adresse']) ?>
-                    <?= htmlspecialchars($restaurant['telephone']) ?>
-                    <?= htmlspecialchars($restaurant['image']) ?>
-                  <img src=  "<?= htmlspecialchars($restaurant['image']) ?>" />
-    </div>
- <?php }  $donneesRestaurant->closeCursor(); */?>-->
-   
-
-    
+    #presentation {
+    border-radius: 5px;
+    margin-top: 10px;}
+    header{margin-top: 10px; border-radius: 5px;}</style>
     
     <!-- Section 4 : Map + infos restaurants -->
     <section id="infoRestaurants">
          <h1>Où nous retrouvez ?</h1>
     <div id="map"></div>
     </section>
+       
     <?php require('public/textFunctions/footer.php'); ?>
     
-    <style>
-        #map{
-            height: 500px;
-            width:500px;
-        }
-    </style>
+  </div>
     
     <?php require('public/js/map/insertionMap.php'); ?>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD_ZAHyvZx-_3Fy66piMrK-ne4NQEoOv4&callback=initMap" async defer></script>
+        
         </body>
         </html>

@@ -1,5 +1,92 @@
-html,body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Verdana';
+    height: 100vh;
+    background-color: #fff0c4;
+    text-align: center;
+}
+
+#dispositionDeLaPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1,
+h2 {
+    color: #0f8c4e;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --- Page Sans get : Choix du restaurant --- */
+
+#pageSansGet {
+    margin-top: 2%;
+}
+
+#pageSansGet p {
+    background-color: #fed38f;
+    color: #0f8c4e;
+    font-size: 150%;
+    padding: 10px;
+}
+
+/* --- Page Avec get : Déposé cv et lm --- */
+
+#pageAvecGet {
+    display: none;
+}
+
+/* ville-restaurant avec son adress et boutton choisir un autre restaurant */
+
+#pageAvecGet nav {
+    padding: 5px;
+    background-color: #e9e0c4;
+    box-shadow: 1px 6px 5px grey;
+}
+
+#pageAvecGet nav p {
+    color: #0f8c4e;
+    font-size: 120%;
+}
+
+#pageAvecGet nav button {
+    background-color: #0f8c4e;
+    color: #fff0c4;
+    font-size: 120%;
+    padding: 5px;
+}
+
+/* Formulaire cv lm et disponibilité */
+
+form p {
+    color: grey;
+    margin-top: 0;
+}
+
+form h2 {
+    margin-top: 40px;
+}
+
+form div + h2 {
+    margin-bottom: 0;
+}
+
+form textarea {
+    min-width: 250px;
+    height: 50px;
+}
+
+input[type="submit"] {
+    background-color: #0e6c35;
+    color: #fff1c5;
+    font-size: 200%;
+    padding: 5px 30px 5px 30px;
+    margin: 30px;
+    box-shadow: 1px 5px 5px grey;
 }

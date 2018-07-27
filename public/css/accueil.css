@@ -282,7 +282,15 @@ body {
 
 /* Section 4 : Initialisation de la map + infos restaurants */
 
-#map {
-    height: 500px;
-    width: 500px;
-}
+     #infoRestaurants{
+            text-align: center;
+            color: #006230;
+        }
+        #map{
+            height: 500px;
+            width:98%;
+            max-width: 1000px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: auto;
+        }
