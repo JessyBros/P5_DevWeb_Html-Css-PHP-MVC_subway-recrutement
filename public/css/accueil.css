@@ -6,6 +6,17 @@ body {
     background-color: #fff0c4;
 
 }
+/* test*/
+
+  #page
+    {max-width: 1500px;
+    margin: auto;
+    background-color: #fff0c4;
+    
+   }
+    body{background: -webkit-linear-gradient(left, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 200%);
+}
+/* test*/
 
 /* Section 1 : Présentation */
 
@@ -233,7 +244,7 @@ body {
     position: relative;
     height: 350px;
     width: 450px;
-    margin: 15px;
+    margin: 20px;
 
 }
 
@@ -246,11 +257,11 @@ body {
 }
 
 
-.imagesRestaurant:nth-child(1) img {
+.imagesRestaurant:nth-child(2n+1) img {
     border: 10px solid #f1bf11;
 }
 
-.imagesRestaurant:nth-child(2) img {
+.imagesRestaurant:nth-child(2n+0) img {
     border: 10px solid #0f8c4e;
 }
 
@@ -272,11 +283,11 @@ body {
     margin-left: 5px;
 }
 
-.imagesRestaurant:nth-child(1) span {
+.imagesRestaurant:nth-child(2n+1) span {
     background-color: #f1bf11;
 }
 
-.imagesRestaurant:nth-child(2) span {
+.imagesRestaurant:nth-child(2n+0) span {
     background-color: #0f8c4e;
 }
 
@@ -288,9 +299,9 @@ body {
         }
         #map{
             height: 500px;
-            width:98%;
-            max-width: 1000px;
+            width:100%;
+            max-width: 700px;
+            min-width: 250px;
             border: 2px solid black;
             border-radius: 5px;
-            margin: auto;
         }

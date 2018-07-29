@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Subway</title>
-    <link href="public/css/accueil.css" rel="stylesheet" />
+  <link href="public/css/accueil.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="public/images/favicon.png" />
     <META NAME="Description" CONTENT="Franchise Subway. restauration 'Le Kremlin-Bicêtre' et ' Val de Fontenay' recrute du personnel. Informations : Qui nous recrutement. Un bref détail du job à réaliser au sein de l'entreprise. Une carte pour la localisation des restaurants et des informations complémentaires.">
     <META NAME="Identifier-URL" CONTENT="url du site dans l'hébergeur">
@@ -18,6 +18,7 @@
 </head>
 
 <body>
+         
     <div id="page">
     <?php require('public/textFunctions/header.php'); ?>
     
@@ -80,37 +81,48 @@
     </section>
     
 <style>
-     #infoRestaurants{
+     #blockInfoRestaurants{
             text-align: center;
             color: #006230;
         }
+    #blockInfoRestaurants article{
+            display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        }
+     #infoDuRestaurant{
+         display: none;
+          background-color: red;
+        min-width: 250px;
+        }
         #map{
             height: 500px;
-            width:98%;
-            max-width: 1000px;
+            width:100%;
+            max-width: 700px;
+            min-width: 250px;
             border: 2px solid black;
             border-radius: 5px;
-            margin: auto;
+        margin: 0;
         }
-    #page
-    {max-width: 1500px;
-    margin: auto;
-    background-color: #fff0c4;
-    
-   }
-    body{background-color: #fff0c4;}
+  
+        </style>
 
-    #presentation {
-    border-radius: 5px;
-    margin-top: 10px;}
-    header{margin-top: 10px; border-radius: 5px;}</style>
     
     <!-- Section 4 : Map + infos restaurants -->
-    <section id="infoRestaurants">
+    <section id="blockInfoRestaurants">
          <h1>Où nous retrouvez ?</h1>
-    <div id="map"></div>
+        <article>
+            <div id="map"></div>
+            <div id="infoDuRestaurant">
+                <p>Ville : <span id="villeMarqueur"></span></p>
+                <p>Adresse : <span id="adresseMarqueur"></span></p>
+                <p>Téléphone : <span id="telephoneMarqueur"></span></p>
+                <p>Horaires : <span id="horairesMarqueur"></span></p>
+            </div>
+        </article>
+    
     </section>
-       
+    
     <?php require('public/textFunctions/footer.php'); ?>
     
   </div>
