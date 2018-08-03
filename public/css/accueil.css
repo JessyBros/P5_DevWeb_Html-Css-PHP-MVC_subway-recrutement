@@ -6,16 +6,20 @@ body {
     background-color: #fff0c4;
 
 }
+
 /* test*/
 
-  #page
-    {max-width: 1500px;
+#page {
+    max-width: 1500px;
     margin: auto;
     background-color: #fff0c4;
-    
-   }
-    body{background: -webkit-linear-gradient(left, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 200%);
+
 }
+
+body {
+    background: -webkit-linear-gradient(left, rgba(125, 126, 125, 1) 0%, rgba(14, 14, 14, 1) 200%);
+}
+
 /* test*/
 
 /* Section 1 : Présentation */
@@ -99,7 +103,7 @@ body {
     flex-wrap: wrap;
     text-align: center;
     margin-top: 20px;
-    font-size: 150%;
+    font-size: 135%;
 }
 
 .articlePourQui {
@@ -111,13 +115,14 @@ body {
     background-color: #0f8c4e;
     border: 5px solid #f1bf11;
     color: white;
-    height: 600px;
-    width: 450px;
+    height: 500px;
+    width: 400px;
 }
 
 .articlePourQui h2 {
     color: #f1bf11;
     font-size: 225%;
+    margin: 5px;
 
 }
 
@@ -143,8 +148,8 @@ body {
     background-color: #f1bf11;
     border: 5px solid #0f8c4e;
     color: #0f8c4e;
-    height: 412.5px;
-    width: 900px;
+    height: 100%;
+    width: 800px;
 }
 
 .articleVotreMission p {
@@ -153,21 +158,36 @@ body {
 
 .articleVotreMission h2 {
     font-size: 225%;
+    margin: 5px;
 }
 
 .articleVotreMission ul {
     text-align: left;
     color: white;
-    width: 375px;
+    width: 310px;
     margin: auto;
 }
 
-@media screen and (max-width: 785px) {
-    #jobInformations h2 {
-        font-size: 175%;
+@media screen and (max-width: 1236px) {
+
+    .articlePourQui {
+        height: 100%;
+    }
+    .articleVotreMission {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+
+    #jobInformations {
+
+        font-size: 115%;
+
     }
 
-}
+
 
 }
 
@@ -177,60 +197,46 @@ body {
         font-size: 125%;
     }
 
-    body {
-        color: red;
-    }
-    .articlePourQui {
-        height: 500px;
-    }
+    .articlePourQui,
     .articleVotreMission {
-        height: 300px;
+        height: 100%;
     }
+
     #jobInformations h2 {
         font-size: 165%;
+    }
+    .articleVotreMission ul {
+        width: 85%;
     }
 
 }
 
 @media screen and (max-width: 300px) {
     #jobInformations {
-
+        background-color: red;
         font-size: 120%;
     }
     .articleVotreMission {
-        height: 355px;
+
+        min-width: 250px;
     }
 
-    .articleVotreMission ul {
-        width: 85%;
-    }
-}
 
-@media screen and (max-width: 285px) {
-    .articleVotreMission {
-        height: 385px;
-    }
 }
 
 /* Section 3 : Les restaurants */
 
 #restaurants h1 {
-    font-size: 200%;
-}
-
-#restaurants h1,
-#restaurants h3 {
     text-align: center;
-    margin: 0px;
+    font-size: 200%;
+    margin: 40px 0 5px 0;
     color: #0f8c4e;
 }
 
-#restaurants h1 {
-    margin-top: 40px;
-}
-
 #restaurants h3 {
-    margin-bottom: 40px;
+    text-align: center;
+    margin: 0 0 40px 0;
+    color: grey;
 }
 
 
@@ -244,7 +250,7 @@ body {
     position: relative;
     height: 350px;
     width: 450px;
-    margin: 20px;
+    margin: 20px 0 20px 0;
 
 }
 
@@ -257,11 +263,11 @@ body {
 }
 
 
-.imagesRestaurant:nth-child(2n+1) img {
+.imagesRestaurant:nth-child(2n + 1) img {
     border: 10px solid #f1bf11;
 }
 
-.imagesRestaurant:nth-child(2n+0) img {
+.imagesRestaurant:nth-child(2n + 0) img {
     border: 10px solid #0f8c4e;
 }
 
@@ -283,25 +289,64 @@ body {
     margin-left: 5px;
 }
 
-.imagesRestaurant:nth-child(2n+1) span {
+.imagesRestaurant:nth-child(2n + 1) span {
     background-color: #f1bf11;
 }
 
-.imagesRestaurant:nth-child(2n+0) span {
+.imagesRestaurant:nth-child(2n + 0) span {
     background-color: #0f8c4e;
+}
+
+@media screen and (max-width: 500px) {
+    #restaurants h1 {
+        font-size: 150%;
+    }
+    #restaurants h3 {
+        font-size: 100%;
+    }
+    .imagesRestaurant img {
+        display: none;
+    }
+    .imagesRestaurant {
+        height: 50px;
+        margin: 0;
+    }
+    .imagesRestaurant div {
+        position: relative;
+        top: 0;
+    }
+    .imagesRestaurant span {
+        display: block;
+        width: 95%;
+    }
+
 }
 
 /* Section 4 : Initialisation de la map + infos restaurants */
 
-     #infoRestaurants{
-            text-align: center;
-            color: #006230;
-        }
-        #map{
-            height: 500px;
-            width:100%;
-            max-width: 700px;
-            min-width: 250px;
-            border: 2px solid black;
-            border-radius: 5px;
-        }
+#blockInfoRestaurants {
+    text-align: center;
+    color: #006230;
+}
+
+#blockInfoRestaurants article {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#infoDuRestaurant {
+    display: none;
+    background-color: red;
+    min-width: 250px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    max-width: 700px;
+    min-width: 250px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0;
+}
