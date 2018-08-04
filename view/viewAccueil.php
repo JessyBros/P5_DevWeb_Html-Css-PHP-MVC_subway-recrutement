@@ -81,17 +81,22 @@
         </section>
 
 
-
         <!-- Section 4 : Map + infos restaurants -->
         <section id="blockInfoRestaurants">
             <h1>Où nous retrouvez ?</h1>
             <article>
                 <div id="map"></div>
+
                 <div id="infoDuRestaurant">
-                    <p>Ville : <span id="villeMarqueur"></span></p>
-                    <p>Adresse : <span id="adresseMarqueur"></span></p>
-                    <p>Téléphone : <span id="telephoneMarqueur"></span></p>
-                    <p>Horaires : <span id="horairesMarqueur"></span></p>
+
+                    <div id="fondBlancInfoRestaurant"> </div>
+                    <div id="textInfoRestaurant">
+                        <p> <span id="villeMarqueur"></span></p>
+                        <p>Adresse : <span id="adresseMarqueur"></span></p>
+                        <p>Téléphone : <span id="telephoneMarqueur"></span></p>
+                        <p>Horaires : <span id="horairesMarqueur"></span></p>
+                    </div>
+
                 </div>
             </article>
 
