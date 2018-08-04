@@ -3,24 +3,16 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Verdana';
-    background-color: #fff0c4;
-
+    background: rgba(64, 62, 55, 1);
 }
-
-/* test*/
 
 #page {
     max-width: 1500px;
     margin: auto;
     background-color: #fff0c4;
-
+    border: 1px solid black;
 }
 
-body {
-    background: -webkit-linear-gradient(left, rgba(125, 126, 125, 1) 0%, rgba(14, 14, 14, 1) 200%);
-}
-
-/* test*/
 
 /* Section 1 : Présentation */
 
@@ -214,8 +206,6 @@ body {
     .articleVotreMission {
         min-width: 250px;
     }
-
-
 }
 
 /* Section 3 : Les restaurants */
@@ -223,13 +213,13 @@ body {
 #restaurants h1 {
     text-align: center;
     font-size: 200%;
-    margin: 40px 0 5px 0;
+    margin: 40px 1px 5px 1px;
     color: #0f8c4e;
 }
 
 #restaurants h3 {
     text-align: center;
-    margin: 0 0 40px 0;
+    margin: 0 1px 40px 1px;
     color: grey;
 }
 
@@ -372,6 +362,7 @@ body {
 
 #infoDuRestaurant #villeMarqueur {
     font-size: 120%;
+    font-weight: bold;
 }
 
 #map {
