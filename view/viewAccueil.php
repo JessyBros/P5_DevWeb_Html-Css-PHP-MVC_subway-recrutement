@@ -23,15 +23,25 @@
         <?php require('public/textFunctions/header.php'); ?>
 
         <!-- Section 2 : Présentation Rejoignez-nous liens recrutement -->
-        <section id="presentation">
+        <section id="conteneurRecrutement">
+            <a href="recrutement">
 
-            <div id="banniere">
-                <a href="recrutement">
-                    <div id="fondBanniere"></div>
-                    <p id="textBanniere">Rejoignez-nous !</p>
-                </a>
-            </div>
+                <div id="imagesPresentation">
+                    <div>
+                        <img src="public/images/salade.png" alt="Une salade" />
+                        <h3>Préparez</h3>
+                    </div>
+                    <div>
+                        <h2>Rejoignez-nous !</h2>
+                        <img src="public/images/presentation.png" alt="Une présentation de Subway pour le recrutement" />
+                    </div>
+                    <div>
+                        <img src="public/images/sandwich.png" alt="Un sandwich" />
+                        <h3 id="test">Conseillez</h3>
+                    </div>
 
+                </div>
+            </a>
         </section>
 
         <!-- Section 2 : Infos Recrutement -->
