@@ -16,13 +16,27 @@ body {
 
 /* Section 1 : Présentation */
 
+a[href="recrutement"] {
+    width: 95%;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#conteneurRecrutement:hover {
+
+    border: 2px solid DarkGray;
+}
+
+
 #conteneurRecrutement {
     background-color: #e6d8ae;
     text-align: center;
-    width: 95%;
+    width: 100%;
     height: 300px;
     margin: auto;
-    padding: 15px;
+    padding: 0;
     margin-top: 10px;
     border-radius: 50px;
     border: 2px solid grey;
@@ -101,6 +115,8 @@ img[src*="sandwich"] {
     }
     #conteneurRecrutement h2 {
         margin: auto;
+        margin-top: 10px;
+        font-size: 220%
     }
 }
 
@@ -118,7 +134,7 @@ img[src*="sandwich"] {
 @media screen and (max-width: 375px) {
 
     #conteneurRecrutement h2 {
-        font-size: 175%
+        font-size: 170%
     }
 }
 
@@ -126,7 +142,7 @@ img[src*="sandwich"] {
 
     #conteneurRecrutement h2 {
         margin-top: 15px;
-        font-size: 145%
+        font-size: 140%
     }
 }
 
@@ -298,6 +314,15 @@ img[src*="sandwich"] {
     border: 10px solid #0f8c4e;
 }
 
+.imagesRestaurant:nth-child(2n + 1) img:hover {
+    box-shadow: 4px 4px 4px DarkSlateGray;
+}
+
+.imagesRestaurant:nth-child(2n + 0) img:hover {
+    box-shadow: 4px 4px 4px DarkSlateGray;
+}
+
+
 .imagesRestaurant div {
     position: absolute;
     width: 100%;
@@ -324,7 +349,7 @@ img[src*="sandwich"] {
     background-color: #0f8c4e;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 525px) {
     #restaurants h1 {
         font-size: 150%;
     }

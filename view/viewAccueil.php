@@ -23,8 +23,9 @@
         <?php require('public/textFunctions/header.php'); ?>
 
         <!-- Section 2 : Présentation Rejoignez-nous liens recrutement -->
-        <section id="conteneurRecrutement">
-            <a href="recrutement">
+        <a href="restaurant">
+            <section id="conteneurRecrutement">
+
 
                 <div id="imagesPresentation">
                     <div>
@@ -41,8 +42,10 @@
                     </div>
 
                 </div>
-            </a>
-        </section>
+
+            </section>
+        </a>
+
 
         <!-- Section 2 : Infos Recrutement -->
         <section id="jobInformations">
@@ -78,7 +81,7 @@
                 <?php while ($restaurant = $donneesRestaurant->fetch()) { ?>
 
                 <article class="imagesRestaurant">
-                    <a href="recrutement-<?= htmlspecialchars($restaurant['url']) ?>">
+                    <a href="restaurant-<?= htmlspecialchars($restaurant['url']) ?>">
                         <div>
                             <span><?= htmlspecialchars($restaurant['ville']) ?></span>
                         </div>
@@ -89,7 +92,6 @@
                 <?php }  $donneesRestaurant->closeCursor(); ?>
             </div>
         </section>
-
 
         <!-- Section 4 : Map + infos restaurants -->
         <section id="blockInfoRestaurants">
@@ -115,8 +117,11 @@
         <?php require('public/textFunctions/footer.php'); ?>
 
     </div>
-
-    <?php require('public/js/map/insertionMap.php'); ?>
+    
+    <!-- Les scripts à l'intégration de la map google et des marqueurs-->
+    <script src="public/js/map/insertionMap.js"></script>
+    <?php require('public/js/map/boucleMarqueurs.php'); ?>
+    <script src="public/js/map/recuperationDonneesMarqueurs.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD_ZAHyvZx-_3Fy66piMrK-ne4NQEoOv4&callback=initMap" async defer></script>
 
 </body>

@@ -3,15 +3,15 @@
 <!-- Utilisation de la programmation orienté objet;
 conrètement il utilise les requetes sql et les convertis dans une variables-->
 <?php
+require('model/accueil.php');
 require('model/restaurant.php');
-require('model/recrutement.php');
 
 function accueil()
 {
-    $restaurantManagers = new RestaurantPostManager(); 
+    $restaurantManagers = new AccueilPostManager(); 
     $donneesRestaurant = $restaurantManagers ->donneesRestaurant(); 
     
-    $marqueursManagers = new RestaurantPostManager(); 
+    $marqueursManagers = new AccueilPostManager(); 
     $donneesMarqueurs = $marqueursManagers ->marqueurs(); 
     
     require('view/viewAccueil.php');
@@ -19,12 +19,12 @@ function accueil()
 
 function recrutement()
 {
-    $choixRestaurantManagers = new RecrutementPostManager(); 
+    $choixRestaurantManagers = new RestaurantPostManager(); 
     $choixRestaurant = $choixRestaurantManagers ->choixRestaurant();
     
-    $restaurantSelectionnerManagers = new RecrutementPostManager(); 
-    $idRestaurant = isset($_GET['restaurant']) ? $_GET['restaurant'] : NULL;  
+    $restaurantSelectionnerManagers = new RestaurantPostManager(); 
+    $idRestaurant = isset($_GET['recrutement']) ? $_GET['recrutement'] : NULL;  
     $restaurantSelectionner = $restaurantSelectionnerManagers ->restaurantSelectionner($idRestaurant) ;
     
-    require('view/viewRecrutement.php');
+    require('view/viewRestaurant.php');
 }

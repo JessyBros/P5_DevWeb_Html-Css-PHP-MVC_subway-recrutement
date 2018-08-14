@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Subway</title>
-    <link href="public/css/recrutement.css" rel="stylesheet" />
+    <link href="public/css/restaurant.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="public/images/favicon.png" />
     <META NAME="Description" CONTENT="Franchise Subway. restauration 'Le Kremlin-Bicêtre' et ' Val de Fontenay' recrute du personnel. Déposez un CV(.">
     <META NAME="Identifier-URL" CONTENT="url du site dans l'hébergeur">
@@ -28,7 +28,7 @@
             <h1>Quel restaurant souhaitez vous postuler ?</h1>
             <div>
                 <?php while ($listeRestaurant= $choixRestaurant->fetch()) { ?>
-                <a href="recrutement-<?= htmlspecialchars($listeRestaurant['url']) ?>">
+                <a href="restaurant-<?= htmlspecialchars($listeRestaurant['url']) ?>">
                     <p>
                         <?= htmlspecialchars($listeRestaurant['ville']) ?>
                     </p>
@@ -48,14 +48,14 @@
                 <p>
                     <?= htmlspecialchars($restaurantSelectionner['adresse']) ?>
                 </p>
-                <a href="recrutement">
+                <a href="restaurant">
                     <button>Choisir un autre restaurant ?</button>
                 </a>
             </nav>
 
        
             <!-- Formulaire pour envoyé son cv et sa lm-->
-            <form action="recrutement-<?= htmlspecialchars($restaurantSelectionner['url']) ?>" method="post">
+            <form action="restaurant-<?= htmlspecialchars($restaurantSelectionner['url']) ?>" method="post" enctype="multipart/form-data">
 
                 <div>
                     <h2>Votre curriculum vitæ</h2>
@@ -67,9 +67,9 @@
                 </div>
                 <h2>Vos disponibilités :</h2>
                 <p>exemple : Dès septembre du lundi au samedi</p>
-                <textarea name="disponibilite"></textarea>
+                <textarea name="message"></textarea>
                 <br>
-                <input type="submit" name="postumler" value="Postuler !" />
+                <input type="submit" name="postuler" value="Postuler !" />
             </form>
         </section>
 

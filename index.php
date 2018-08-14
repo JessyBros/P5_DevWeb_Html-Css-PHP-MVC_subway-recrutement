@@ -12,7 +12,7 @@ try {
         {
             accueil();
         }
-        elseif ($_GET['action'] == 'recrutement') 
+        elseif ($_GET['action'] == 'restaurant') 
         {
             recrutement();
         }
