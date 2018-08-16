@@ -1,7 +1,9 @@
+<?php require('public/functions/envoieMail.php'); ?>
 <!-- Page de recrutement, qui va être récupéré par le CONTROLLER
     - Si non fait, choix du restaurant
     - Formulaire CV + LDM-->
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -37,8 +39,6 @@
             </div>
         </section>
 
-
-
         <!-- Affiche le restaurant séléctionné avec son adresse. Il peut également cliqué sur un boutton pour être rediriger à la liste de tous les restaurants-->
         <section id="pageAvecGet">
             <nav>
@@ -55,7 +55,7 @@
 
        
             <!-- Formulaire pour envoyé son cv et sa lm-->
-            <form action="restaurant-<?= htmlspecialchars($restaurantSelectionner['url']) ?>" method="post" enctype="multipart/form-data">
+           <form action="restaurant-<?= htmlspecialchars($restaurantSelectionner['url']) ?>" method="post" enctype="multipart/form-data">
 
                 <div>
                     <h2>Votre curriculum vitæ</h2>
@@ -69,8 +69,14 @@
                 <p>exemple : Dès septembre du lundi au samedi</p>
                 <textarea name="message"></textarea>
                 <br>
+                <input type="hidden" name= "ville" value ="<?= htmlspecialchars($restaurantSelectionner['ville']) ?>"/>
+                <input type="hidden" name= "urlVille" value ="<?= htmlspecialchars($restaurantSelectionner['url']) ?>"/>
                 <input type="submit" name="postuler" value="Postuler !" />
             </form>
+            
+            <p class="resultatEnvoieMail">
+                <?php echo $resultatEnvoieMail;?>
+            </p>
         </section>
 
     </div>

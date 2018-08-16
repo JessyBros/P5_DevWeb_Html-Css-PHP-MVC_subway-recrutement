@@ -1,0 +1,24 @@
+Site: http://www.subwayrecrutement.com/
+
+AIDE :
+
+
+1 )
+Question : Si vous souhaitez supprimer ou ajouter un restaurant?
+
+Reponse :Simplement, modifier les donnés dans la base de donné. (css s'adaptera)
+
+
+
+2)
+Question :Vous recherchez les longitudes et lagitudes du restaurants pour le mettre dans la base de donné?
+
+Reponse :   	-allez sur https://www.google.fr/maps/
+
+		- entrez l'adresse sur la barre de recherche
+           
+		- clik droit sur le curseur rouge
+            
+		- cliquez sur : "Plus d'info sur cette endroit"
+ 
+	        - recupérer les les longitudes et lagitudes de votre restaurant ;D

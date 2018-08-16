@@ -1,8 +1,8 @@
-<!-- LE CONTROLLER -->
-<!-- Il récupère les MODELES, soit les requetes SQL-->
-<!-- Utilisation de la programmation orienté objet;
-conrètement il utilise les requetes sql et les convertis dans une variables-->
 <?php
+/* LE CONTROLLER */
+/* Il récupère les MODELES, soit les requetes SQL */
+/* Utilisation de la programmation orienté objet;
+conrètement il utilise les requetes sql et les convertis dans une variables */
 require('model/accueil.php');
 require('model/restaurant.php');
 

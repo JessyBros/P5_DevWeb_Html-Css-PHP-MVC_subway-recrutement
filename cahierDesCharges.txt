@@ -3,42 +3,13 @@ Enseigne : Subway
 Objectif: recrutement futur employés.
 Restaurants : Le kremlin-bicêtre; Val de Fontenay.
 Nécessité : Les gens postulent un cv et une lettre de motivation
-maquettes subway :
-https://fr.wix.com/website-template/view/html/1791?originUrl=http%3A%2F%2Ffr.wix.com%2Fwebsite%2Ftemplates%3Fcriteria%3Dconsultant&bookName=&galleryDocIndex=4
 --------------------------------------------------------------------
 
---------------------------
-Maquette en construction
---------------------------
 
 
---------------------------
-mail au patron
---------------------------
+SITE WEB TERMINÉ!
+www.subwayrecrutement.com
 
-Bonjour Richard.
-
-Concernant le projet de recrutement.
-Voici-ci joints les maquettes du site.
-
-------------------
-Conception du site:
--------------------
-C'est un site de recrutement, ce qui permet aux internautes de déposez leur candidature dans vos deux restaurants.
-Soit Le kremlin-bicêtre soit Val de fontenay.
-
------------
-QUESTIONS :
------------
- - Avant toute chose, voulez-vous recevoir les 'CV' et 'LDM' par mail ou directement sur le site avec une espace de connexion?
-
-- Un hébergement gratuit je me doute. Vous en voulez un en particulier, et pour le nom de dommaine également?
-  (sinon je choisis sans aucun soucis)
-
-- en plus du 'CV' et de la 'LDM' voulez que je demande qu'ils indiquent leur disponibilités si ils ne sont pas marqué sur la lettre de motivation?
- 
-- Je ne suis pas designer, du coup est ce que les maquettes vous conviennent?
-   ( Je peux amélioré des points, rajouter des élements, en retirer, etc)
 
 ---------------
 Me contacter :

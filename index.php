@@ -1,8 +1,8 @@
-<!-- LE ROUTEUR-->
-<!-- Il récupère le CONTROLLER soit les fonctions de chaque page.
-Et applique une fonction selon une action get obtenus soit une page selon la fonction appliqué par le get.-->
-
 <?php
+/* LE ROUTEUR*/
+/*Il récupère le CONTROLLER soit les fonctions de chaque page.
+Et applique une fonction selon une action get obtenus soit une page selon la fonction appliqué par le get.*/
+
 require('controller/frontend.php');
 
 try {

@@ -1,3 +1,9 @@
+
+# HTID:6399088: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:6399088:
+
+
 #--------------------------------------------------
 # protège le fichier .hatccess
 #--------------------------------------------------
@@ -16,7 +22,7 @@ Options +FollowSymlinks
 # Activation du module de réécriture d'URL :
 RewriteEngine on
 
-ErrorDocument 404 http://localhost/subwayRecrutement
+ErrorDocument 404 http://www.subwayrecrutement.com/
 
 #--------------------------------------------------
 # Règles de réécriture d'URL : Subway
@@ -26,3 +32,4 @@ ErrorDocument 404 http://localhost/subwayRecrutement
 RewriteRule ^$ index.php?action=accueil
 RewriteRule ^restaurant$ index.php?action=restaurant
 RewriteRule ^restaurant-(.*) index.php?action=restaurant&recrutement=$1
+RewriteRule ^envoieMail$ index.php?action=envoieMail

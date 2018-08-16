@@ -1,8 +1,8 @@
-<!-- MODELE 1 -->
-<!--Progammation orienté OBJET PUR-->
-<!-- Dans une classe private, il insère la connexion à la base de donné-->
-<!-- Dans des functions public appel la fonction private connexion et utilisation des requetes SQL (query, prepare, exec...)-->
 <?php
+/* MODELE 1 */
+/* Progammation orienté OBJET PUR */
+/* Dans une classe private, il insère la connexion à la base de donné */
+/* Dans des functions public appel la fonction private connexion et utilisation des requetes SQL (query, prepare, exec...)*/
 class AccueilPostManager{
 
     // connexion à la BASE DE DONNE
@@ -10,7 +10,7 @@ class AccueilPostManager{
     {
         try
         {
-            $db = new PDO('mysql:host=localhost;dbname=subwayrecrutement;charset=utf8', 'root', '');
+            $db = new PDO('mysql:host=localhost;dbname=id6801523_subwayrecrutement','id6801523_subwayrecrutement','subwayrecrutement');
         }
         catch(Exception $e)
         {

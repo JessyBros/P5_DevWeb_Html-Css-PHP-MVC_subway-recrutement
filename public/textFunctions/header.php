@@ -1,4 +1,4 @@
-<a href="accueil">
+<a href="http://www.subwayrecrutement.com">
     <header>
         <span id="sub">SUB</span>
         <span id="way">WAY</span>
@@ -20,7 +20,7 @@
     }
     #sub{
         color: #ffc214;
-        margin-left: 25px;
+        margin-left: 12px;
     }
     #way{
         color: #0f9246;
@@ -29,7 +29,14 @@
     @media screen and (max-width: 480px){
         header{
             font-size: 250%;
-        }  
+        }
+        
+        #sub{
+            
+        }
+       #way{
+            margin-right:5px;
+        }
     }
     
 </style>

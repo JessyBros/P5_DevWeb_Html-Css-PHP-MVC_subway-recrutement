@@ -6,6 +6,7 @@ body {
     height: 100vh;
     background-color: #fff0c4;
     text-align: center;
+    word-wrap: break-word;
 }
 
 #dispositionDeLaPage {
@@ -89,4 +90,9 @@ input[type="submit"] {
     padding: 5px 30px 5px 30px;
     margin: 30px;
     box-shadow: 1px 5px 5px grey;
+}
+
+.resultatEnvoieMail{
+    color:red;
+    font-size:125%;
 }
