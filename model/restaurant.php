@@ -10,7 +10,8 @@ class RestaurantPostManager{
     {
         try
         {
-            $db = new PDO('mysql:host=localhost;dbname=id6801523_subwayrecrutement','id6801523_subwayrecrutement','subwayrecrutement');
+            //$db = new PDO('mysql:host=localhost;dbname=id6801523_subwayrecrutement','id6801523_subwayrecrutement','subwayrecrutement');
+            $db = new PDO('mysql:host=localhost;dbname=subwayrecrutement;charset=utf8', 'root', '');
         }
         catch(Exception $e)
         {

@@ -53,8 +53,8 @@
             <article class="articlePourQui">
                 <h2>Pour Qui ?</h2>
                 <div>
-                    <p>Vous êtes <strong>étudiant(e)</strong> ?</p>
-                    <p>Vous Cherchez un <strong>mi-temps</strong> ?</p>
+                    <p>Vous êtes disponible les midis ?</p>
+                    <p>Vous cherchez un <strong>mi-temps</strong> ?</p>
                     <p>Ou tout simplement un <strong>CDI</strong> ?</p>
                 </div>
                 <p>Alors n'hésitez pas une seconde et tentez votre chance !</p>
@@ -64,19 +64,19 @@
                 <h2>Votre mission ?</h2>
                 <p>Devenez Équipiez polyvalent et rejoignez notre équipe !</p>
                 <ul>
-                    <li>Vous accueillerez les clients.</li>
-                    <li>Assurez les prépartions.</li>
-                    <li>Réalisez des sandwich.</li>
-                    <li>Entretenir les locaux</li>
+                    <li>Vous a les clients.</li>
+                    <li>Assurerez les prépartions.</li>
+                    <li>Réaliserez des sandwiches.</li>
+                    <li>Entretiendrez les locaux</li>
                 </ul>
-                <p>Objectif : Toute tâche qui mèneront au bon fonctionnement du restaurant.</p>
+                <p>Objectif : toutes les tâches utiles à la satisfaction du client</p>
             </article>
         </section>
 
         <!-- Section 3 : Les restaurants liens recrutement -->
         <section id="restaurants">
             <h1>Vous êtes décidez à nous rejoindre ?</h1>
-            <h3>Choississez un restaurant et postulez en 30 secondes !</h3>
+            <h3>Choisissez un restaurant et postulez en 30 secondes !</h3>
             <div id="conteneurImagesRestaurant">
                 <?php while ($restaurant = $donneesRestaurant->fetch()) { ?>
 
