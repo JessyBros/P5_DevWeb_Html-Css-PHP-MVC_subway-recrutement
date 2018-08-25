@@ -3,12 +3,12 @@ $resultatEnvoieMail = "";
 if(isset($_POST['postuler'])){
 error_reporting(E_ALL); ini_set("display_errors", 1); //Display errors
     if (get_magic_quotes_gpc()){  
-        $message = stripslashes(htmlentities($_POST['message']));
+        $message = stripslashes(html_entity_decode($_POST['message']));
     }else{  
-        $message = "Disponibilité : " . htmlentities($_POST['message']);
+        $message = "Disponibilité : " . html_entity_decode($_POST['message']);
     }
 	//vérifie si l'hote autorise les \r
-    if(preg_match("#@(hotmail|live|msn).[a-z]{2,4}$#", "j.bros@hotmail.fr"))
+    if(preg_match("#@(hotmail|live|msn).[a-z]{2,4}$#", "subwayrecrutement94@gmail.com"))
     {
         $passage_ligne = "\n";
     }
@@ -21,7 +21,7 @@ error_reporting(E_ALL); ini_set("display_errors", 1); //Display errors
     $ville = isset($_POST['ville']) ? $_POST['ville'] : NULL;
     $urlVille = isset($_POST['urlVille']) ? $_POST['urlVille'] : NULL;
  
-    $email_to = "j.bros@hotmail.fr"; // Reçois
+    $email_to = "subwayrecrutement94@gmail.com"; // Reçois
     $email_subject = $ville . " : CV & LM"; // Sujet
     $boundary = md5(rand()); // Clé boundary aléatoire
     function clean_string($string) {
@@ -30,8 +30,8 @@ error_reporting(E_ALL); ini_set("display_errors", 1); //Display errors
     } 
      
     
-    $headers = "From: SubwayRecrutement<'subwayrecrutement94@gmail.com'>" . $passage_ligne; //Celui qui envoi
-    $headers.= "Reply-to: SubwayRecrutement <'subwayrecrutement94@gmail.com'>" . $passage_ligne; //Celui qui envoi
+    $headers = "From: SubwayRecrutement<'us-imm-node2a.000webhost.io'>" . $passage_ligne; //Celui qui envoi
+    $headers.= "Reply-to: SubwayRecrutement <'us-imm-node2a.000webhost.io'>" . $passage_ligne; //Celui qui envoi
     $headers.= "MIME-Version: 1.0" . $passage_ligne; //MIME Version
     $headers.= "X-Priority: 3".$passage_ligne;
     $headers.= 'Content-Type: multipart/mixed; boundary='.$boundary .' '. $passage_ligne; //Content (2 versions ex:text/plain et text/html)
@@ -79,14 +79,17 @@ error_reporting(E_ALL); ini_set("display_errors", 1); //Display errors
                 }else{
 					//Error Message pour la taille du fichier 2MB
                     $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe mais celle ci était superieure à 2Mo.". $passage_ligne;
+                    $resultatEnvoieMail = "Erreur : votre curriculum vitæ est supérieur à  2Mo.<br/>";
                 }
             }else{
 				//Error Message for wrong content type for attachment
                 $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe mais elle n'était pas au bon format.". $passage_ligne;
+                $resultatEnvoieMail = "Erreur : votre curriculum vitæ n'est pas au bon format.<br/>";
             }
         }else{
 			//Error Message for sending a .htaccess file
             $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe .htaccess.". $passage_ligne;
+            $resultatEnvoieMail = "Erreur : votre curriculum vitæ n'est pas au bon format.<br/>";
         }
     }
 
@@ -127,27 +130,38 @@ error_reporting(E_ALL); ini_set("display_errors", 1); //Display errors
                 }else{
 					//Error Message for attachment above 2MB
                     $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe mais celle ci était superieure à 2Mo.". $passage_ligne;
+                    $resultatEnvoieMail .=  "Erreur : votre lettre de motivation est supérieur à  2Mo.";
                 }
             }else{
 				//Error Message for wrong content type for attachment
                 $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe mais elle n'était pas au bon format.". $passage_ligne;
+                $resultatEnvoieMail .=  "Erreur : votre lettre de motivation n'est pas au bon format.";
             }
         }else{
 			//Error Message for sending a .htaccess file
             $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe .htaccess.". $passage_ligne;
+            $resultatEnvoieMail .=   "Erreur : votre lettre de motivation n'est pas au bon format.";
         }
     }
                 
     $email_message .= $passage_ligne . "--" . $boundary . "--" . $passage_ligne; //Closing boundary
   
-
+if ($resultatEnvoieMail == ""){
 if(mail($email_to,$email_subject, $email_message, $headers)){
-    
+   
     $resultatEnvoieMail = "Votre curriculum vitæ et lettre de motivation ont bien été envoyés :D";
+   ?>
+    <style>
+        .resultatEnvoieMail {
+            color: green;
+        }
+
+    </style>
+    <?php
 }
 else{
     
     $resultatEnvoieMail = "Erreur : les fichiers n\'ont pas été envoyés :(";
 }
-
+}
 }

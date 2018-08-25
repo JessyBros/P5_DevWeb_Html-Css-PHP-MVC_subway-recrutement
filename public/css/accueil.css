@@ -154,7 +154,7 @@ img[src*="sandwich"] {
     flex-wrap: wrap;
     text-align: center;
     margin-top: 20px;
-    font-size: 135%;
+    font-size: 134%;
 }
 
 .articlePourQui {
@@ -179,7 +179,7 @@ img[src*="sandwich"] {
 
 
 .articlePourQui div {
-    font-size: 115%;
+    font-size: 110%;
     height: 50%;
 }
 
@@ -234,6 +234,11 @@ img[src*="sandwich"] {
     #jobInformations {
         font-size: 115%;
     }
+    .articlePourQui div {
+        font-size: 115%;
+        height: 50%;
+    }
+
 }
 
 
@@ -444,7 +449,7 @@ img[src*="sandwich"] {
     margin: 0;
 }
 
-@media screen and (max-width: 1222px) {
+@media screen and (max-width: 1224px) {
     #map {
         height: 350px;
         order: 2;

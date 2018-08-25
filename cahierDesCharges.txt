@@ -1,24 +1,107 @@
------------------------------------------------------------------
+----------------------------------
+PROJET
+----------------------------------
+site : www.subwayrecrutement.com
 Enseigne : Subway
-Objectif: recrutement futur employés.
-Restaurants : Le kremlin-bicêtre; Val de Fontenay.
-Nécessité : Les gens postulent un cv et une lettre de motivation
---------------------------------------------------------------------
+
+client : Monsieur X , patron de deux restaurations subway.
+
+Objectif: Créer un site de recrutement.
+
+Nécessité : Les gens postulent un cv et une lettre de motivation.
+
+Date limite : Opérationnel fin de l'année.
+----------------------------------
+INFORMATIONS RESTAURANTS :
+---------------------------------
+- Le Kremlin-Bicêtre.
+  Adresse : Centre commercial Okabe, 57-77 Avenue de Fontainebleau, 94270 Le Kremlin-Bicetre.
+  Téléphone : 01.58.46.35.63.
+  Horaires : 10h-21h30 du lundi au samedi.
+  latitude : 48.814794
+  Longitude : 2.36291
+
+- Val de Fontenay.
+  Adresse : Centre Commercial Périval, 12 rue de la Mare à Guillaume, 94120 Fontenay sous Bois.
+  Téléphone : 01.48.86.72.42.
+  Horaires : 9h00-19h45 du lundi au samedi.
+  latitude : 48.858528
+  Longitude : 2.48530
 
 
+---------------------------------
+QUEL DONNÉES CONTIENDRA LE SITE
+---------------------------------
 
-SITE WEB TERMINÉ!
-www.subwayrecrutement.com
+- Un titre
+- Espace recrutement
+- Qui peut être recruté
+- Les tâches du métiers
+- Mise en avant des restaurants
+- Un espace contact avec une carte google
+- Déposition des CV et LM. Eventuellement les disponibilités
 
 
----------------
-Me contacter :
-----------------
+---------------------------------
+COMPOSITION DU SITE
+---------------------------------
+1er page (accueil) :
+Présentation gobal des restaurants et du métier
+avec un espace pour allé à la deuxieme page recrutement.
+
+2ème page (recrutement)
+Permet au internautes de postulez leur CV et LM.
+
+---------------------------------
+PLANNING ÉTAPE PAR ÉTAPE
+---------------------------------
+
+- Conception d'une maquette de base.
+- Mise en place du projet sur un serveur ( WEBHOST )
+- Création de la base de donnés et des informations restaurants.
+
+- Mise en place des dossier MVC avec mise en place du routeur.
+- Appel de la base de donnés en classe private.
+
+
+- Écriture html et css du site via la maquette.
+- Création des fonctions pour récupérés les informations des restaurants.
+- Gestion des redirections entre les deux pages avec ou sans GET.
+- Mise en place de la carte google (page1)
+
+
+-Création d'un mail pour le site
+-Mise en place du formulaire.
+-Création de la fonction Mail (permet de récupérer le formulaire et d'envoyé le mail à l'adresse correspondante).
+
+-Gestion des erreurs et fail XSS.
+-Adaptation et amélioration du CSS.
+
+-Création du fichier .hatcess et rectification des redirections (url)
+
+-Achat du sous domaine (url du site)
+
+---------------------------------
+SITE TERMINÉ ?
+---------------------------------
+Envoi des informations au client.
+-adresse url du site.
+-mail du site avec coordonnées.
+site hébergeur avec coordonnées.
+
+- Réglages de certains détail demandé par l'employeur.
+- Mise en ligne du site.
+
+---------------------------------
+SUITE PROJET (PUB)
+---------------------------------
+- Création au format A4 avec adresse du site, un pub de recrutement pour tous ceux qui souhaitent tenter leur chance.
+
+---------------------------------
+ME CONTACTER :
+---------------------------------
 
 tel : 06.48.10.74.48
 mail : j.bros@hotmail.fr
 
-cordialement,
-
 BROS jessy.
-

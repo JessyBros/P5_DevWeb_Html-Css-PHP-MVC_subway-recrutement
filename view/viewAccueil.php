@@ -46,14 +46,13 @@
             </section>
         </a>
 
-
         <!-- Section 2 : Infos Recrutement -->
         <section id="jobInformations">
 
             <article class="articlePourQui">
                 <h2>Pour Qui ?</h2>
                 <div>
-                    <p>Vous êtes disponible les midis ?</p>
+                    <p>Vous êtes disponible <strong>les midis</strong> ?</p>
                     <p>Vous cherchez un <strong>mi-temps</strong> ?</p>
                     <p>Ou tout simplement un <strong>CDI</strong> ?</p>
                 </div>
@@ -64,18 +63,18 @@
                 <h2>Votre mission ?</h2>
                 <p>Devenez Équipiez polyvalent et rejoignez notre équipe !</p>
                 <ul>
-                    <li>Vous a les clients.</li>
-                    <li>Assurerez les prépartions.</li>
+                    <li>Vous accueillerez les clients.</li>
+                    <li>Assurerez les préparations.</li>
                     <li>Réaliserez des sandwiches.</li>
-                    <li>Entretiendrez les locaux</li>
+                    <li>Entretiendrez les locaux.</li>
                 </ul>
-                <p>Objectif : toutes les tâches utiles à la satisfaction du client</p>
+                <p>Objectif : toutes les tâches utiles à la satisfaction du client.</p>
             </article>
         </section>
 
         <!-- Section 3 : Les restaurants liens recrutement -->
         <section id="restaurants">
-            <h1>Vous êtes décidez à nous rejoindre ?</h1>
+            <h1>Vous êtes décidé à nous rejoindre ?</h1>
             <h3>Choisissez un restaurant et postulez en 30 secondes !</h3>
             <div id="conteneurImagesRestaurant">
                 <?php while ($restaurant = $donneesRestaurant->fetch()) { ?>
@@ -95,7 +94,7 @@
 
         <!-- Section 4 : Map + infos restaurants -->
         <section id="blockInfoRestaurants">
-            <h1>Où nous retrouvez ?</h1>
+            <h1>Où nous retrouver ?</h1>
             <article>
                 <div id="map"></div>
 

@@ -62,7 +62,7 @@
         font-weight: bold;
     }
     
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 600px){
         header{
             font-size: 200%;
         }

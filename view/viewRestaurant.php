@@ -1,4 +1,3 @@
-<?php require('public/functions/envoieMail.php'); ?>
 <!-- Page de recrutement, qui va être récupéré par le CONTROLLER
     - Si non fait, choix du restaurant
     - Formulaire CV + LDM-->
@@ -12,9 +11,11 @@
     <link href="public/css/restaurant.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="public/images/favicon.png" />
     <META NAME="Description" CONTENT="Franchise Subway. restauration 'Le Kremlin-Bicêtre' et ' Val de Fontenay' recrute du personnel. Déposez un CV(.">
-    <META NAME="Identifier-URL" CONTENT="url du site dans l'hébergeur">
+    <META NAME="Identifier-URL" CONTENT="http://www.subwayrecrutement.com/">
     <META NAME="Keywords" CONTENT="Subway, recrutement, personnel, job, travail, embauche">
 </head>
+
+<?php require('public/functions/envoieMail.php'); ?>
 
 <body id="dispositionDeLaPage">
 
@@ -27,7 +28,7 @@
 
         <!-- L'utilisateur doit choisir le restautant auquel il souhaite postuler son cv et sa ldm-->
         <section id="pageSansGet">
-            <h1>Quel restaurant souhaitez vous postuler ?</h1>
+            <h1>Quel restaurant souhaitez-vous postuler ?</h1>
             <div>
                 <?php while ($listeRestaurant= $choixRestaurant->fetch()) { ?>
                 <a href="restaurant-<?= htmlspecialchars($listeRestaurant['url']) ?>">
@@ -66,12 +67,12 @@
                     <input name="lm" required="" type="file">
                 </div>
                 <h2>Vos disponibilités :</h2>
-                <p>exemple : Dès septembre du lundi au samedi</p>
-                <textarea name="message"></textarea>
+                <p>Exemple : Dès septembre du lundi au samedi</p>
+                <textarea name="message" maxlength="125"></textarea>
                 <br>
                 <input type="hidden" name= "ville" value ="<?= htmlspecialchars($restaurantSelectionner['ville']) ?>"/>
                 <input type="hidden" name= "urlVille" value ="<?= htmlspecialchars($restaurantSelectionner['url']) ?>"/>
-                <input type="submit" name="postuler" value="Postuler !" />
+                <input type="submit" name="postuler" value="Postulez !" />
             </form>
             
             <p class="resultatEnvoieMail">
