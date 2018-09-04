@@ -103,7 +103,6 @@ img[src*="sandwich"] {
     }
 
 }
-
 @media screen and (max-width: 610px) {
     img[src*="presentation"] {
         display: none;
