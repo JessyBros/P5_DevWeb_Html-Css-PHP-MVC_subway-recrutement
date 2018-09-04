@@ -1,19 +1,9 @@
 <!-- Page de recrutement, qui va être récupéré par le CONTROLLER
     - Si non fait, choix du restaurant
     - Formulaire CV + LDM-->
-<!DOCTYPE html>
+<?php $css = "public/css/restaurant.css" ?>
 
-<html>
-
-<head>
-    <meta charset="utf-8" />
-    <title>Subway</title>
-    <link href="public/css/restaurant.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="public/images/favicon.png" />
-    <META NAME="Description" CONTENT="Franchise Subway. restauration 'Le Kremlin-Bicêtre' et ' Val de Fontenay' recrute du personnel. Déposez un CV(.">
-    <META NAME="Identifier-URL" CONTENT="http://www.subwayrecrutement.com/">
-    <META NAME="Keywords" CONTENT="Subway, recrutement, personnel, job, travail, embauche">
-</head>
+<?php ob_start(); ?>
 
 <?php require('public/functions/envoieMail.php'); ?>
 
@@ -30,13 +20,14 @@
         <section id="pageSansGet">
             <h1>Quel restaurant souhaitez-vous postuler ?</h1>
             <div>
-                <?php while ($listeRestaurant= $choixRestaurant->fetch()) { ?>
+                
+                <?php  foreach ($choixRestaurant as $listeRestaurant  ): ?>
                 <a href="restaurant-<?= htmlspecialchars($listeRestaurant['url']) ?>">
                     <p>
                         <?= htmlspecialchars($listeRestaurant['ville']) ?>
                     </p>
                 </a>
-                <?php }  $choixRestaurant->closeCursor(); ?>
+                <?php endforeach; ?>
             </div>
         </section>
 
@@ -88,7 +79,7 @@
         <?php require('public/textFunctions/footer.php'); ?>
     </div>
 
+<?php $content = ob_get_clean(); ?>
 
-</body>
+<?php require('view/template.php'); ?>
 
-</html>

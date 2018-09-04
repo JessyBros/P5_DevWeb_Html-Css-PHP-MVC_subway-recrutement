@@ -1,14 +1,13 @@
 <?php
-$resultatEnvoieMail = "";
 if(isset($_POST['postuler'])){
 error_reporting(E_ALL); ini_set("display_errors", 1); //Display errors
     if (get_magic_quotes_gpc()){  
-        $message = stripslashes(html_entity_decode($_POST['message']));
+        $message = stripslashes(htmlspecialchars($_POST['message']));
     }else{  
-        $message = "Disponibilité : " . html_entity_decode($_POST['message']);
+        $message = "Disponibilité : " . htmlspecialchars($_POST['message']);
     }
 	//vérifie si l'hote autorise les \r
-    if(preg_match("#@(hotmail|live|msn).[a-z]{2,4}$#", "subwayrecrutement94@gmail.com"))
+    if(preg_match("#@(hotmail|live|msn).[a-z]{2,4}$#", htmlspecialchars($recuperationEmail['email'])))
     {
         $passage_ligne = "\n";
     }
@@ -21,7 +20,7 @@ error_reporting(E_ALL); ini_set("display_errors", 1); //Display errors
     $ville = isset($_POST['ville']) ? $_POST['ville'] : NULL;
     $urlVille = isset($_POST['urlVille']) ? $_POST['urlVille'] : NULL;
  
-    $email_to = "subwayrecrutement94@gmail.com"; // Reçois
+    $email_to = htmlspecialchars($recuperationEmail['email']); // Reçois
     $email_subject = $ville . " : CV & LM"; // Sujet
     $boundary = md5(rand()); // Clé boundary aléatoire
     function clean_string($string) {
@@ -164,4 +163,8 @@ else{
     $resultatEnvoieMail = "Erreur : les fichiers n\'ont pas été envoyés :(";
 }
 }
+}
+else
+{
+    $resultatEnvoieMail = "";
 }

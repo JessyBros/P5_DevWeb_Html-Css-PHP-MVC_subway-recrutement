@@ -22,7 +22,7 @@ Options +FollowSymlinks
 # Activation du module de réécriture d'URL :
 RewriteEngine on
 
-ErrorDocument 404 http://www.subwayrecrutement.com/
+ErrorDocument 404 http://localhost/subwayrecrutement
 
 #--------------------------------------------------
 # Règles de réécriture d'URL : Subway
@@ -33,3 +33,17 @@ RewriteRule ^$ index.php?action=accueil
 RewriteRule ^restaurant$ index.php?action=restaurant
 RewriteRule ^restaurant-(.*) index.php?action=restaurant&recrutement=$1
 RewriteRule ^envoieMail$ index.php?action=envoieMail
+
+RewriteRule ^connexion$ index.php?action=connexion
+RewriteRule ^administration$ index.php?action=administration
+RewriteRule ^listeRestaurant$ index.php?action=listeRestaurant
+RewriteRule ^ajoutRestaurant$ index.php?action=ajoutRestaurant
+
+RewriteRule ^modifRestaurant$ index.php?action=modifRestaurant
+RewriteRule ^modifier-restaurant-(.+)$ index.php?action=modifRestaurant&restaurant=$1
+
+RewriteRule ^supRestaurant$ index.php?action=supRestaurant
+RewriteRule ^supprimer-restaurant-(.+)$ index.php?action=supRestaurant&restaurant=$1
+
+RewriteRule ^accessAdministration$ index.php?action=accessAdministration
+RewriteRule ^receptionEmail$ index.php?action=receptionEmail

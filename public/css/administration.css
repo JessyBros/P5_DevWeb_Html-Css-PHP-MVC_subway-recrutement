@@ -1,0 +1,61 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Verdana';
+    margin: auto;
+    background-color: #fff0c4;
+    text-align: center;
+    font-size: 120%;
+}
+
+#page {
+    margin-top: 35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#crud {
+    display: none;
+}
+
+p {
+    display: inline-block;
+    color: #0f8c4e;
+    background-color: #f1bf11;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+p:hover {
+    background-color: coral;
+}
+
+
+li {
+    margin: 30px;
+    display: inline-block;
+    color: #f1bf11;
+    background-color: #0f8c4e;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+li:hover {
+    background-color: darkgreen;
+}
+
+#deconnexion {
+    color: brown;
+    background-color: darkslategrey;
+}
+
+#deconnexion:hover {
+    color: red;
+
+}

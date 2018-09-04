@@ -3,21 +3,9 @@
         - Le recrutement pour qui? En quoi consiste le travail brièvement
         - Les deux restaurants avec redirection à la page recrutement
         - map avec localisation des restaurants-->
-<!DOCTYPE html>
-<html>
+<?php $css = "public/css/accueil.css" ?>
 
-<head>
-    <meta charset="utf-8" />
-    <title>Subway</title>
-    <link href="public/css/accueil.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="public/images/favicon.png" />
-    <META NAME="Description" CONTENT="Franchise Subway. restauration 'Le Kremlin-Bicêtre' et ' Val de Fontenay' recrute du personnel. Informations : Qui nous recrutement. Un bref détail du job à réaliser au sein de l'entreprise. Une carte pour la localisation des restaurants et des informations complémentaires.">
-    <META NAME="Identifier-URL" CONTENT="url du site dans l'hébergeur">
-    <META NAME="Keywords" CONTENT="Subway, recrutement, personnel, job, travail, embauche">
-    <meta name="viewport" content="initial-scale=1.0">
-</head>
-
-<body>
+<?php ob_start(); ?>
 
     <div id="page">
         <?php require('public/textFunctions/header.php'); ?>
@@ -77,7 +65,7 @@
             <h1>Vous êtes décidé à nous rejoindre ?</h1>
             <h3>Choisissez un restaurant et postulez en 30 secondes !</h3>
             <div id="conteneurImagesRestaurant">
-                <?php while ($restaurant = $donneesRestaurant->fetch()) { ?>
+                <?php  foreach ($donneesRestaurant as $restaurant  ): ?>
 
                 <article class="imagesRestaurant">
                     <a href="restaurant-<?= htmlspecialchars($restaurant['url']) ?>">
@@ -88,7 +76,7 @@
                     </a>
                 </article>
 
-                <?php }  $donneesRestaurant->closeCursor(); ?>
+                <?php endforeach; ?>
             </div>
         </section>
 
@@ -123,6 +111,6 @@
     <script src="public/js/map/recuperationDonneesMarqueurs.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD_ZAHyvZx-_3Fy66piMrK-ne4NQEoOv4&callback=initMap" async defer></script>
 
-</body>
+<?php $content = ob_get_clean(); ?>
 
-</html>
+<?php require('view/template.php'); ?>

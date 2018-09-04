@@ -1,4 +1,42 @@
 ----------------------------------
+Rectification du projet !
+----------------------------------
+
+Plusieurs points sont à revoir sur ce projet pour pouvoir le valider:
+
+Niveau fonctionnalité, il faut en PHP au minimum un CRUD ce qui implique:
+- une interface d'administration
+- une possibilité de modifier l'email de réception des cv, possibilité de lister/modifier les restaurants, etc.
+- une gestion de la session
+- une gestion du user
+
+Côté code, le MVC doit être respecté, ainsi que les bonnes pratiques du PHP , du HTML et du JS:
+- pas d'ajout de script et de traitement d'application dans la vue (le script de traitement du form)
+- pas de redondance de code html, il faut utiliser des includes
+- les données JS peuvent être appelées en ajax
+- pas de méthode de PDO dans la vue (fetch dans la vue), cela doit resté dans le model
+- une syntaxe alternative doit être utilisée dans la vue
+- un système d'auload serait idéal pour gérer les appels aux classes
+- une couche d'abstraction pour gérer les entités serait aussi un plus
+- enfin l'utilisation de namespace compléterait ce code
+
+ RESTE :
+* CRUD  mail
+* les données JS peuvent être appelées en ajax
+* un système d'auload serait idéal pour gérer les appels aux classes
+* une couche d'abstraction pour gérer les entités serait aussi un plus
+*erreur
+
+#page {
+    max-width: 1500px;
+    margin: auto;
+    background-color: #fff0c4;
+    border: 1px solid black;
+}
+vert :#0f8c4e
+jaune :#f1bf11
+
+----------------------------------
 PROJET
 ----------------------------------
 site : www.subwayrecrutement.com
