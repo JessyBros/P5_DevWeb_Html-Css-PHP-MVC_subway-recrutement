@@ -21,20 +21,10 @@ Côté code, le MVC doit être respecté, ainsi que les bonnes pratiques du PHP , du
 - enfin l'utilisation de namespace compléterait ce code
 
  RESTE :
-* CRUD  mail
+
 * les données JS peuvent être appelées en ajax
-* un système d'auload serait idéal pour gérer les appels aux classes
 * une couche d'abstraction pour gérer les entités serait aussi un plus
 *erreur
-
-#page {
-    max-width: 1500px;
-    margin: auto;
-    background-color: #fff0c4;
-    border: 1px solid black;
-}
-vert :#0f8c4e
-jaune :#f1bf11
 
 ----------------------------------
 PROJET

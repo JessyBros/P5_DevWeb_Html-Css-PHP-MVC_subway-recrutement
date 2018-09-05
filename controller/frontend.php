@@ -4,12 +4,13 @@
 /* Utilisation de la programmation orienté objet;
 conrètement il utilise les requetes sql et les convertis dans une variables */
 
-use \Subway\Projet\Model\UtilisateurPostManager;
-use \Subway\Projet\Model\AdministrationPostManager;
+use \Subway\ProjetOC\UtilisateurPostManager;
+use \Subway\ProjetOC\AdministrationPostManager;
+use \Subway\ProjetOC\Autoloader;
 
+require('model/Autoloader.php');
+Autoloader::register();
 
-require('model/UtilisateurPostManager.php');
-require('model/AdministrationPostManager.php');
 
 function accueil()
 {
@@ -82,11 +83,11 @@ function ajoutRestaurant()
         $lat = isset($_POST['lat']) ? $_POST['lat'] : NULL;
         $lng = isset($_POST['lng']) ? $_POST['lng'] : NULL;
         $urlVille = isset($_POST['urlVille']) ? $_POST['urlVille'] : NULL;
-
+        $urlVille = str_replace("/","",$urlVille); 
         $ajoutRestaurant = $ajoutRestaurantManager->ajoutRestaurant($ville,$adresse,$telephone,$horaires,$urlImage,$lat,$lng,$urlVille);
     }
     
-   require('public/functions/ajoutRestaurant.php');
+   require('public/functions/crudRestaurant.php');
 
     require('view/viewAjoutRestaurant.php');
 }
@@ -110,12 +111,16 @@ function modifRestaurant()
         $lat = isset($_POST['lat']) ? $_POST['lat'] : NULL;
         $lng = isset($_POST['lng']) ? $_POST['lng'] : NULL;
         $urlVille = isset($_POST['urlVille']) ? $_POST['urlVille'] : NULL;
+        $urlVille = $urlVille = str_replace("/","",$urlVille); 
+        
+        
+    
         $recuperationRestaurant = isset($_POST['id']) ? $_POST['id'] : NULL;
         
         $modifRestaurant = $modificationRestaurantManager->modifRestaurant($ville,$adresse,$telephone,$horaires,$urlImage,$lat,$lng,$urlVille,$recuperationRestaurant);
     }
     
-    require('public/functions/modifRestaurant.php');
+    require('public/functions/crudRestaurant.php');
     
      $getRestaurantManager = new AdministrationPostManager();
         $restaurantSelectionner  = isset($_GET['restaurant']) ? $_GET['restaurant'] : NULL;
@@ -139,7 +144,7 @@ function supRestaurant()
         $supRestaurant = $suppressionRestaurantManager->supRestaurant($supprimerLeRestaurant);
     }
     
-    require('public/functions/supRestaurant.php');
+    require('public/functions/crudRestaurant.php');
     $getRestaurantManager = new AdministrationPostManager();
         $restaurantSelectionner  = isset($_GET['restaurant']) ? $_GET['restaurant'] : NULL;
     $getRestaurant = $getRestaurantManager->choixRestaurant($restaurantSelectionner);

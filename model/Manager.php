@@ -1,6 +1,6 @@
 <?php
 
-namespace Subway\Projet\Model;
+namespace Subway\ProjetOC;
 
 class Manager
 {

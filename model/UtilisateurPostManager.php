@@ -1,8 +1,5 @@
 <?php
-namespace Subway\Projet\Model;
-
-require_once("model/Manager.php");
-
+namespace Subway\ProjetOC;
 
 class UtilisateurPostManager extends Manager{
 

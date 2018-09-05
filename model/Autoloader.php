@@ -1,16 +1,15 @@
 <?php
+namespace Subway\ProjetOC;
+
 class Autoloader{
 
-
 static function register(){
-     spl_autoload-register(array(--CLASS--, 'autoload'));
+     spl_autoload_register(array(__CLASS__, 'autoload'));
      }
     
-    static function autoload($class_name){
-        require $class_name. '.php';
+    static function autoload($class){
+        $class = str_replace('Subway\ProjetOC\\', 'model/', $class);
+        require $class . '.php';
     }
 
-
 }
-//require 'model/Autoloader.php';
-//Autoloader::register();
