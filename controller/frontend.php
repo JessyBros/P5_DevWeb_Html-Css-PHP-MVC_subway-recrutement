@@ -40,7 +40,9 @@ function recrutement()
     $recuperationEmailManager = new AdministrationPostManager(); 
     $recuperationEmail = $recuperationEmailManager-> recuperationEmail();
     
+    require('public/functions/envoieMail.php');
     require('view/viewRestaurant.php');
+    require('public/functions/pageRecrutementAvecGetOnlyCSS.php');
 }
 
 function connexion()

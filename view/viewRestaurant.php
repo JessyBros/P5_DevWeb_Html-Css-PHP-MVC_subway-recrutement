@@ -5,11 +5,8 @@
 
 <?php ob_start(); ?>
 
-<?php require('public/functions/envoieMail.php'); ?>
-
 <body id="dispositionDeLaPage">
 
-    <?php require('public/functions/pageRecrutementAvecGetOnlyCSS.php'); ?>
 
     <div class="elementPage">
 

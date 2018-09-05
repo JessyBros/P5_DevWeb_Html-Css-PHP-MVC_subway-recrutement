@@ -4,13 +4,14 @@ namespace Subway\ProjetOC;
 class UtilisateurPostManager extends Manager{
 
    
-    //Page 1 : Accueil
+     //Page 1 : Accueil
     public function donneesRestaurant() 
     {   
         $connexion = $this-> connexion();
         $req = $connexion->query('SELECT * FROM restaurant ORDER BY id ');
         return $req;
     }
+    
     
     public function marqueurs()
     {
