@@ -3,6 +3,7 @@
 var map;
 var tableauMarqueur = [];
 
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
@@ -11,7 +12,4 @@ function initMap() {
         },
         zoom: 11
     });
-
-    intregrationDesMarqueurs();
-    recuperationDonneesMarqueurs();
-}
+} 

@@ -27,6 +27,12 @@
     header i {
         font-size: 150%;
         float: right;
+        color: darkgreen;
+        
+    }
+    
+     header i:hover {
+        
         color: white;
         
     }
@@ -37,7 +43,7 @@
     }
 
     @media screen and (max-width: 600px) {
-        header {
+        header div {
             font-size: 200%;
         }
 

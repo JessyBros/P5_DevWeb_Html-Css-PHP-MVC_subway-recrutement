@@ -20,8 +20,13 @@ function accueil()
     $marqueursManagers = new UtilisateurPostManager(); 
     $donneesMarqueurs = $marqueursManagers ->marqueurs(); 
     
-    
+
+  require('public/functions/marqueursDatas.php');
+
+
+       
     require('view/viewAccueil.php');
+        
 }
 
 function recrutement()
