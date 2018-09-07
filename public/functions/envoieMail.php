@@ -1,5 +1,6 @@
 <?php
 if(isset($_POST['postuler'])){
+    $resultatEnvoieMail = "";
 error_reporting(E_ALL); ini_set("display_errors", 1); //Display errors
     if (get_magic_quotes_gpc()){  
         $message = stripslashes(htmlspecialchars($_POST['message']));
@@ -163,6 +164,7 @@ else{
     $resultatEnvoieMail = "Erreur : les fichiers n\'ont pas été envoyés :(";
 }
 }
+
 }
 else
 {

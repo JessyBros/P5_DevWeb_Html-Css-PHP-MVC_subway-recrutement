@@ -15,18 +15,20 @@ Autoloader::register();
 function accueil()
 {
     $restaurantManagers = new UtilisateurPostManager(); 
-    $donneesRestaurant = $restaurantManagers ->donneesRestaurant(); 
+    $donneesRestaurants = $restaurantManagers ->donneesRestaurant();
+    
+    $restaurantManager = new UtilisateurPostManager(); 
+    $donneesRestaurant = $restaurantManager ->donneesRestaurant(); 
     
     $marqueursManagers = new UtilisateurPostManager(); 
     $donneesMarqueurs = $marqueursManagers ->marqueurs(); 
     
+    
 
-  require('public/functions/marqueursDatas.php');
-
-
+    require('public/functions/marqueursDatas.php');
        
     require('view/viewAccueil.php');
-        
+    require('public/js/map/boucleMarqueurs.php');
 }
 
 function recrutement()
@@ -90,7 +92,7 @@ function ajoutRestaurant()
         $lat = isset($_POST['lat']) ? $_POST['lat'] : NULL;
         $lng = isset($_POST['lng']) ? $_POST['lng'] : NULL;
         $urlVille = isset($_POST['urlVille']) ? $_POST['urlVille'] : NULL;
-        $urlVille = str_replace("/","",$urlVille); 
+        $urlVille = str_replace("/","",$urlVille);
         $ajoutRestaurant = $ajoutRestaurantManager->ajoutRestaurant($ville,$adresse,$telephone,$horaires,$urlImage,$lat,$lng,$urlVille);
     }
     

@@ -9,6 +9,7 @@
         text-align: center;
         background-color:  #e9e0c4;
         margin: 0;
+        width: 99.9%;
     }
     footer p{
         margin:5px 0 5px 0;

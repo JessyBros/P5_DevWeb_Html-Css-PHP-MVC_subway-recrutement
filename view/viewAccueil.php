@@ -65,7 +65,7 @@
             <h1>Vous êtes décidé à nous rejoindre ?</h1>
             <h3>Choisissez un restaurant et postulez en 30 secondes !</h3>
             <div id="conteneurImagesRestaurant">
-                <?php  foreach ($donneesRestaurant as $restaurant  ): ?>
+                <?php  foreach ($donneesRestaurants as $restaurant  ): ?>
 
                 <article class="imagesRestaurant">
                     <a href="restaurant-<?= htmlspecialchars($restaurant['url']) ?>">
@@ -102,17 +102,13 @@
         </section>
 
         <?php require('public/textFunctions/footer.php'); ?>
-
+        
     </div>
     <!-- Les scripts à l'intégration de la map google et des marqueurs-->
  
 
- <script src="public/js/ajax.js"></script>
-    <script src="public/js/map/insertionMap.js"></script>
-
-
-    <?php require('public/js/map/boucleMarqueurs.php'); ?>
-    
+    <script src="public/js/ajax.js"></script>
+    <script src="public/js/map/insertionMap.js"></script>    
     <script src="public/js/map/recuperationDonneesMarqueurs.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD_ZAHyvZx-_3Fy66piMrK-ne4NQEoOv4&callback=initMap" async defer></script>
 
