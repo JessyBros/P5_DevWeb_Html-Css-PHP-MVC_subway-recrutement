@@ -19,3 +19,10 @@ class Manager
         return $db;
     }
 }
+mysql://
+b92bc0b589c008
+:
+ed49513f
+@
+eu-cdbr-west-01.cleardb.com
+/heroku_574b7fa2ec1111f?reconnect=true
