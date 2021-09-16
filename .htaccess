@@ -22,7 +22,7 @@ Options +FollowSymlinks
 # Activation du module de réécriture d'URL :
 RewriteEngine on
 
-ErrorDocument 404 http://localhost/subwayrecrutement
+ErrorDocument 404 https://jb-subway-recrutement.herokuapp.com/
 
 #--------------------------------------------------
 # Règles de réécriture d'URL : Subway
